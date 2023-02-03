@@ -348,6 +348,7 @@ main .conttainer {
   flex-direction: row-reverse;
   justify-content: center;
   margin: 1rem;
+  overflow: hidden;
 }
 main h2 {
   color: var(--blanco);
@@ -574,7 +575,7 @@ main .bloqueUnoInfo {
 .formulario {
   width: min(60rem, 100%);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem;
   border-radius: 1rem;
 }
 .formulario fieldset {
@@ -696,6 +697,10 @@ main .bloqueUnoInfo {
   }
   }
 /**NOSOTROS**/
+.conttainer.glass.nosotros{
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
 .conttainer.glass .cajaHorarios {
   display: flex;
   flex-direction: row;
@@ -848,6 +853,7 @@ section .cajaHorarios{
   gap: 2rem;
   width: 100%;
   margin-top: 2rem;
+  bottom: 0;
 }
 .footer .iconsans img {
   width: 3rem;
