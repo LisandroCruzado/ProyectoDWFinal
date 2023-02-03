@@ -9,6 +9,7 @@
   --terciarioDark: #24273a;
   --darkness: #332c2c;
   --fuentePrincipal: "Exo 2", sans-serif;
+  --fuenteSecundaria: "Pattaya", sans-serif;
 }
 /*Globales*/
 html {
@@ -25,7 +26,7 @@ html {
 *:after {
   margin: 0;
   padding: 0;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', 'Pattaya' sans-serif;
   font-size: 2rem;
   box-sizing: inherit;
 }
@@ -250,11 +251,11 @@ body {
 }
 .contttainer {
   width: 100%;
-  height: 10rem;
+  height: 122px;
   overflow: hidden;
   display: flex;
   align-items:center;
-  justify-content:end;
+  justify-content:center;
 }
 .glaass {
   background: linear-gradient(
@@ -332,7 +333,7 @@ main .conttainer {
     width: 98%;
   }
 }
-@media (max-width: 768px){
+@media (max-width: 936px){
   .conttainer, .cajasPadre{
     width: 100%;
   }
@@ -405,7 +406,7 @@ main h2 {
     width: 100%;
   }
   .bloqueCero .glass{
-    height: 52.4rem;
+    height: 58.4rem;
   }
   .bloqueUno .fotoBloqueUno{
     display: flex;
@@ -422,7 +423,7 @@ main h2 {
     overflow: hidden;
   }
 }
-@media (max-width: 530px) {
+@media (max-width: 568px) {
   /* main .cuerpodeProgramas{
     width: 100%;
     margin: 0;
@@ -437,7 +438,7 @@ main h2 {
   }
 
   .bloqueCero .glass{
-    height: 74rem;
+    height: 79rem;
     width: 100%;
   }
   .bloqueUno .fotoBloqueUno {
@@ -865,4 +866,45 @@ section .cajaHorarios{
   .footer {
   height:fit-content;
   }
+}
+/*slider brandmarks*/
+.texto p{
+  font-family: var(--fuenteSecundaria);
+  font-size: 2.5rem;
+}
+.slider{
+  width: 78vw;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+.slide {
+  width: 20rem;
+}
+.slider .slide-track{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: scroll 180s linear infinite;
+  -webkit-animation: scroll 360s linear infinite;
+  width: calc(200px * 14);
+}
+
+.slider .slide {
+    width: 100px;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-100px * 7));
+        transform: translateX(calc(-100px * 7));
+    }
 }
