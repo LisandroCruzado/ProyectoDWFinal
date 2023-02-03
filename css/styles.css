@@ -308,7 +308,7 @@ main .conttainer {
   align-items: center;
   justify-content: center;
   margin: 1rem;
-  overflow: auto;
+  overflow: hidden;
 }
 .cajaHijos {
   margin: 1rem;
