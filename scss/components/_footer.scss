@@ -1,0 +1,38 @@
+/**FOOTER**/
+.footer {
+	@include flex (flex, space-around, center, row);
+    color: nth($colores, 4);
+    height: auto;
+    padding: 0.5rem 10%;
+    background-color: nth($colores, 5);
+    height: auto;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 2rem;
+    bottom: 0;
+}
+.footer {
+	.iconsans {
+		img {
+			width: 3rem;
+			height: 3rem;
+			transition: all 0.3s;
+			border-radius: 17%;
+		}
+	}
+}
+.footer {
+	.iconsans {
+		img {
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+.footer {
+	.iconsans {
+		cursor: pointer;
+		margin-right: auto;
+	}
+}

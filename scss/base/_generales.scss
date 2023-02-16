@@ -1,0 +1,179 @@
+/*GENERALES*/
+html {
+	font-size: 62.5%;
+	/*1rem=10px*/
+	box-sizing: border-box;
+}
+.contenedor {
+	max-width: 120rem;
+	margin: 0 auto;
+	max-width: 100%;
+}
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	font-family: 'Exo 2', 'Pattaya' sans-serif;
+	font-size: 2rem;
+	box-sizing: inherit;
+}
+/*SIZES FONTS*/
+h1 {
+	font-size: 3.8rem;
+	text-align: center;
+}
+h2 {
+	font-size: 2.8rem;
+	text-align: center;
+}
+h3 {
+	font-size: 2.3rem;
+	text-align: center;
+}
+p {
+	font-size: 1.5rem;
+}
+a {
+	text-decoration: none;
+}
+/*WALLPAPER*/
+body {
+	background: url(../img/backgroundwallpaper.webp) no-repeat center center fixed;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	width: 100%;
+}
+/*MAIN GENERALES*/
+main {
+	width: 100%;
+	font-weight: 400;
+}
+/*BOTON*/
+.boton {
+	background-color: nth($colores, 6);
+	color: nth($colores, 4);
+	padding: 1rem 3rem;
+	margin-top: 3rem;
+	font-size: 2rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-radius: 0.5rem;
+	width: 90%;
+	text-align: center;
+	border: none;
+}
+/*FONDO TRANSPARENTE SIN HOVER*/
+.simpleGlass {
+	@extend %flex;
+	width: 100%;
+	height: 122px;
+	overflow: hidden;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+	backdrop-filter: blur(0.5rem);
+	-webkit-backdrop-filter: blur(10px);
+	border-top: 2px solid rgba(255, 255, 255, 0.18);
+	border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+	margin-top: 4.9rem;
+	margin-bottom: 3rem;
+	p{
+        color: nth($colores, 4);
+    }
+}
+/*FONDO TRANSPARENTE CON HOVER*/
+.hoverGlass {
+	width: 80%;
+	margin: auto;
+	overflow: auto;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+	backdrop-filter: blur(0.5rem);
+	-webkit-backdrop-filter: blur(10px);
+	border-radius: 20px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	box-shadow: 0 8px 32px 0 rgba(196, 192, 192, 0.37);
+	transition: all 400ms ease;
+	&:hover {
+		box-shadow: 5 16px 48px 0 rgba(222, 218, 218, 0.73);
+		border: 2px solid rgba(255, 255, 255, 0.694);
+		transform: scale(1.02);
+	}
+	h1 {
+        color: nth($colores, 4);
+    }
+}
+
+/*BOTON DE CONTACTO FORMULARIO*/
+.w-sm-100 {
+	width: 100%;
+}
+/*WHATSAPP BUTTON*/
+.whatsapp {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+}
+.whatsapp {
+	svg {
+		width: 80px;
+		filter: drop-shadow(0 1px 4px rgba(0, 0, 0, .4));
+	}
+}
+.whatsapp {
+	circle {
+		fill: #25d366;
+	}
+}
+.whatsapp {
+	path {
+		fill: nth($colores, 4);
+	}
+}
+/*SLIDER PATROCINADORES*/
+.texto {
+	p {
+		font-family: $fuenteSecundaria;
+		font-size: 2.5rem;
+	}
+}
+.slider {
+	width: 100vw;
+	height: auto;
+	margin: auto;
+	overflow: hidden;
+}
+.slide {
+	width: 20rem;
+}
+.slider {
+	.slide-track {
+		@include flex (flex, space-between, center, row);
+		animation: scroll 180s linear infinite;
+		-webkit-animation: scroll 360s linear infinite;
+		width: calc(200px * 14);
+	}
+}
+.slider {
+	.slide {
+		width: 100px;
+	}
+}
+.slider {
+	.slide {
+		img {
+			width: 100%;
+		}
+	}
+}
+@keyframes scroll {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	100% {
+		-webkit-transform: translateX(calc(-100px * 7));
+		transform: translateX(calc(-100px * 7));
+	}
+}

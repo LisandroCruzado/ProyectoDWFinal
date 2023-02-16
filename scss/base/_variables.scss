@@ -1,0 +1,46 @@
+/*LISTA COLORES*/
+$colores:
+#00ff00, //1
+#00cc33, //2
+#91f3a9, //3
+#fff, //4
+#000, //5
+#5d6d7e, //6
+#393c4d, //7
+#24273a, //8
+#332c2c; //9
+/*FUENTES*/
+$fuentePrincipal: "Exo 2", sans-serif;
+$fuenteSecundaria: "Pattaya", sans-serif;
+/*MAPAS*/
+//KEY - VALUE
+$textDecorations:(
+    subrayado: 1px solid nth($colores, 1),
+);
+/* EXTENDS %=placeholder */
+%flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* @mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+@mixin flex ($flex, $justify, $align, $direction){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+/*GLOW EFFECT*/
+@keyframes animate {
+    from {
+        text-shadow: 0 0 10px nth($colores, 4);
+    }
+    to {
+        text-shadow: 0 0 30px nth($colores, 4),
+            0 0 15px nth($colores, 4);
+    }
+}

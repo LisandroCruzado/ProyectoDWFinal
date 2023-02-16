@@ -1,0 +1,355 @@
+/*INDEX*/
+.hero{
+	top: -9rem;
+	z-index: 0;
+    background-image: url(../img/banner__hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75rem;
+    position:relative;
+    max-width: 100%;
+    background-attachment: initial;
+    margin-bottom: -14.5rem;
+    .contenido-hero{
+        position: absolute;
+        background-color: #000000a7;
+        width: 100%;
+        height: 100%;
+		@include flex (flex, center, center, column);
+        h1{
+            color: nth($colores, 4);
+        }
+        p{
+            color: nth($colores, 4);
+			animation: animate 1s ease-in-out infinite alternate;
+			font-size: 2rem;
+			text-align: center;
+        }
+		span{
+			color: nth($colores, 4);
+			text-align: center;
+		}
+		img{
+			width: 10rem;
+			margin-top: 5rem;
+		}
+	}
+        .ubication{
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+    }
+/**MAIN**/
+.bloqueUnoInfo {
+		@include flex (flex, center, center, column);
+		margin: 1rem;
+		height: auto;
+		color: nth($colores, 4);
+		h2{
+			text-decoration: underline;
+		}
+	}
+.bloqueUno{
+	@extend %flex;
+}
+.titulo {
+	@extend %flex;
+	font-size: 3.8rem;
+	margin: 0 3rem;
+	color: nth($colores, 4);
+	border-bottom: map-get($textDecorations, subrayado);
+	h2 {
+		font-size: 3.8rem;
+	}
+}
+.cajasPadre {
+	width: 95%;
+	color: nth($colores, 4);
+	margin: auto;
+	margin-bottom: 2rem;
+	overflow: hidden;
+}
+.cajasHijos {
+	@extend %flex;
+	margin: 1rem;
+	overflow: hidden;
+}
+.cajaHijos {
+	margin: 1rem;
+}
+.cajasHijoss {
+	@include flex (flex, center, center, row-reverse);
+	margin: 1rem;
+	overflow: hidden;
+}
+/*PROGRAMAS*/
+.tituloPrincipal {
+	color: nth($colores, 4);
+	text-align: center;
+}
+.cajasPadre {
+	width: 90%;
+}
+.bloqueCero {
+	@include flex (flex, center, center, column);
+	margin-bottom: 2rem;
+	height: auto;
+	p {
+		color: nth($colores, 4);
+	}
+}
+.bloqueUno {
+	@extend %flex;
+	border-radius: 18px;
+	height: 40rem;
+    text-align: center;
+    .bloqueUnoInfo{
+        h2{
+            margin-bottom: 2rem;
+        }
+    }
+}
+.fotosSuperior {
+	width: 30rem;
+	height: 100%;
+	border-top-right-radius: 15px;
+}
+.fotosInferior {
+	width: 30rem;
+	height: 100%;
+	border-bottom-right-radius: 15px;
+}
+.fotoBloqueUno {
+	@extend %flex;
+	flex-direction: column;
+	height: 100%;
+}
+.HorariosUno {
+	background-color: nth($colores, 5);
+	color: nth($colores, 4);
+	padding: 1rem;
+	width: 30rem;
+	margin: 1rem;
+	text-align: center;
+	border-radius: 8px;
+}
+.HorariosDos {
+	background-color: nth($colores, 5);
+	color: nth($colores, 4);
+	padding: 1rem;
+	width: 30rem;
+	margin: 1rem;
+	text-align: center;
+	border-radius: 8px;
+}
+
+/*PROFESORES*/
+.cajaMain {
+	gap: 2rem;
+    text-align: center;
+}
+.cajaMain .hoverGlass{
+	margin-bottom: 1.5rem;
+}
+.miniCajaProfesor {
+	@extend %flex;
+	h2 {
+		color: nth($colores, 4);
+	}
+	p {
+		font-size: 1rem;
+	}
+}
+p {
+	color: nth($colores, 4);
+}
+.cajaTextos {
+	margin: 2rem;
+}
+.fotoProfesor {
+	img {
+		width: 45rem;
+	}
+}
+.fotProfesora {
+	max-width: 100rem;
+}
+/*CONTACTO*/
+.formulario {
+    width: calc(min(60rem, 100%));
+    margin: 0 auto;
+    padding: 5rem;
+    border-radius: 1rem;
+    fieldset {
+        border: none;
+    }
+    legend {
+        text-align: center;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: nth($colores, 1);
+    }
+}
+.campo {
+    margin-bottom: 1rem;
+    label {
+        color: nth($colores, 4);
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+    textarea {
+        height: 20rem;
+    }
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+.boton {
+    &:hover {
+        cursor: pointer;
+    }
+}
+.enviar {
+    .boton {
+        width: 100%;
+    }
+}
+.boxFormulario {
+    margin-top: 2rem;
+}
+/**ICONOS CONTACTO + MAPS**/
+.contactoBloque {
+	@extend %flex;
+	height: auto;
+	margin-bottom: 2rem;
+	gap: 2rem;
+	width: 100%;
+	overflow: hidden;
+	.iconsContacto {
+		img {
+			transition: all 0.3s;
+			border-radius: 17%;
+			&:hover {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+.iconContactoFather {
+	@extend %flex;
+}
+.iconsContacto {
+	@include flex (flex, center, center, column);
+	iframe {
+		width: 50rem;
+	}
+}
+.parent {
+	@extend %flex;
+	gap: 2rem;
+	width: 100%;
+	overflow: hidden;
+}
+.cajaHorarios {
+	@extend %flex;
+	gap: 2rem;
+	width: 100%;
+	overflow: hidden;
+}
+/*NOSOTROS*/
+.hoverGlass.nosotros {
+	padding: 2rem;
+	margin-bottom: 2rem;
+}
+.hoverGlass {
+	.cajaHorarios {
+		@extend %flex;
+		width: 95%;
+		color: nth($colores, 4);
+		margin: 2rem;
+	}
+	text-align: center;
+}
+.cajaHorarios {
+	p {
+		text-align: center;
+	}
+	h2 {
+		text-decoration: underline;
+	}
+}
+h3{
+	text-decoration: underline;
+}
+.parent {
+	width: 100%;
+	min-height: 65rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 55rem 55rem;
+}
+.sons {
+	@extend %flex;
+	iframe {
+		width: 100%;
+	}
+	.userExperienceMaster {
+		@include flex (flex, center, center, column);
+		margin-top: -13rem;
+	}
+}
+.info {
+	margin-top: -15rem;
+}
+section {
+	.cajaHorarios {
+		width: 100%;
+		margin-bottom: -17rem;
+	}
+}
+.soccial {
+	@include flex (flex, center, center, column);
+	margin-top: -10rem;
+	gap: 1rem;
+	img {
+		width: 30rem;
+		margin: 1rem;
+		border-radius: 2rem;
+	}
+}
+.userExperienceMaster {
+	.userExperience {
+		border: 1px solid rgba(255, 255, 255, 0.354);
+		color: nth($colores, 4);
+		width: 35rem;
+		margin: 1rem;
+		text-decoration: none;
+		border-radius: 2rem;
+	}
+}
+.userExperience {
+	padding: .5rem;
+	ul {
+		list-style: none;
+	}
+	svg {
+		width: 64px;
+		height: 64px;
+	}
+}
+.boxOne {
+	margin-right: 25rem;
+}
+.boxTwo {
+	margin: 0;
+}
+.boxThree {
+	margin-left: 25rem;
+}
