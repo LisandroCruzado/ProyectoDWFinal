@@ -64,7 +64,7 @@
 	}
 }
 .cajasPadre {
-	width: 95%;
+	width: 100%;
 	color: nth($colores, 4);
 	margin: auto;
 	margin-bottom: 2rem;
@@ -72,16 +72,18 @@
 }
 .cajasHijos {
 	@extend %flex;
-	margin: 1rem;
-	overflow: hidden;
+	margin: 1rem 0;
+	padding: 0 1rem;
 }
 .cajaHijos {
-	margin: 1rem;
+	margin: 1rem 0;
+	padding: 0 1rem;
 }
 .cajasHijoss {
 	@include flex (flex, center, center, row-reverse);
-	margin: 1rem;
+	margin: 1rem 0;
 	overflow: hidden;
+	padding: 0 1rem;
 }
 /*PROGRAMAS*/
 .tituloPrincipal {

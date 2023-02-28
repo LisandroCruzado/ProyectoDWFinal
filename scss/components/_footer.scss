@@ -10,29 +10,61 @@
     width: 100%;
     margin-top: 2rem;
     bottom: 0;
+	flex-wrap: wrap;
 }
 .footer {
-	.iconsans {
-		img {
-			width: 3rem;
-			height: 3rem;
-			transition: all 0.3s;
-			border-radius: 17%;
+	.imgFoot img{
+		width: 200px;
+		height: 200px;
+	}
+	.partOneFoot{
+		@include flex (flex, space-around, center, row);
+		border-bottom: map-get($textDecorations, subrayado);
+		width: 100%;
+		padding: 2rem;
+	}
+	.partOneFoot .dirFoot{
+		flex-direction: row;
+		.infoFoot{
+			display: flex;
+			flex-direction: column;
 		}
 	}
-}
-.footer {
-	.iconsans {
-		img {
-			&:hover {
-				transform: scale(1.2);
+	}
+	.partOneFoot .hsFoot{
+		display: flex;
+		flex-direction: column;
+		table{
+			border-collapse: collapse;
+			border-spacing: 0;
+			text-indent: initial;
+		}
+		tr {
+			text-transform: uppercase;
+			td{
+				&:last-child {
+					padding: 0 5rem;
+				}
 			}
 		}
 	}
-}
-.footer {
-	.iconsans {
+	.partOneFoot .iconsans {
 		cursor: pointer;
-		margin-right: auto;
+		flex-direction: row;
+		img {
+			width: 6rem;
+			aspect-ratio: 1;
+			transition: all 0.3s;
+			border-radius: 17%;
+			img {
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
 	}
+
+.partTwoFoot{
+	width: 100%;
+	text-align: center;
 }
