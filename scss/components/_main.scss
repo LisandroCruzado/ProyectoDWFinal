@@ -216,6 +216,7 @@ p {
 .boton {
     &:hover {
         cursor: pointer;
+		color: nth($colores, 1);
     }
 }
 .enviar {

@@ -2,8 +2,7 @@
 @media screen and (max-width: 1157px) {
     .header{
         padding: 0;
-        margin: 0 1rem;
-		
+        margin: 0 1rem;		
     }
 }
 @media screen and (max-width: 945px) {
@@ -65,6 +64,14 @@
 		.hoverGlass {
 			width: 100%;
 		}
+	}
+}
+@media (max-width: 460px){
+	.hero{
+		height: 60rem;
+	}
+	.hero .contenido-hero h1{
+		font-size: 2.8rem;
 	}
 }
 @media (max-width: 936px) {
